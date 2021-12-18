@@ -1,0 +1,86 @@
+html {
+    box-sizing: border-box;
+    background: #ffc600;
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+}
+
+body {
+    margin: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.panels {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.panel {
+    background: blueviolet;
+    box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+    color: white;
+    text-align: center;
+    align-items: center;
+    /* Safari transitionend event.propertyName === flex */
+    /* Chrome + FF transitionend event.propertyName === flex-grow */
+    transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    background 0.2s;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel1 { background-image:url(https://images.unsplash.com/photo-1639402479828-78bb0b67698d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80); }
+.panel2 { background-image:url(https://cdn04.allafrica.com/download/pic/main/main/csiid/00580183:da48ff28839e3a9b1ed21b81679824cd:arc614x376:w1200.jpg); }
+.panel3 { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
+.panel4 { background-image:url(data:image/jpeg;base64,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); }
+.panel5 { background-image:url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); }
+
+/* Flex Items */
+.panel > * {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel > *:first-child { transform: translateY(-100%); }
+.panel.open-active > *:first-child { transform: translateY(0); }
+.panel > *:last-child { transform: translateY(100%); }
+.panel.open-active > *:last-child { transform: translateY(0); }
+
+.panel p {
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+}
+
+.panel p:nth-child(2) {
+    font-size: 4em;
+}
+
+.panel.open {
+    flex: 5;
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    .panel p {
+        font-size: 1em;
+    }
+}
